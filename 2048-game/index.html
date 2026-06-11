@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>2048 小游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="splash-screen" id="splash-screen">
+        <div class="splash-content">
+            <div class="splash-title-container">
+                <h1 class="splash-title">2048</h1>
+                <div class="splash-subtitle">益智数字游戏</div>
+            </div>
+            <div class="splash-grid">
+                <div class="splash-tile splash-tile-2">2</div>
+                <div class="splash-tile splash-tile-4">4</div>
+                <div class="splash-tile splash-tile-8">8</div>
+                <div class="splash-tile splash-tile-16">16</div>
+            </div>
+            <button class="splash-start-button" id="splash-start-button">开始游戏</button>
+            <div class="splash-info">
+                <p>合并相同数字，达到2048！</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container" id="game-container">
+        <div class="heading">
+            <h1 class="title">2048</h1>
+            <div class="scores-container">
+                <div class="score-container">
+                    <div class="score-label">得分</div>
+                    <div class="score-value" id="score">0</div>
+                </div>
+                <div class="score-container">
+                    <div class="score-label">最佳</div>
+                    <div class="score-value" id="best-score">0</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="above-game">
+            <p class="game-intro">
+                <strong>玩法:</strong> 使用 <strong>方向键</strong> 或 <strong>WASD</strong> 或 <strong></strong>滑动</strong> 移动方块。按 <strong>Ctrl+Z</strong> 撤销上一步。
+            </p>
+            <div class="buttons-container">
+                <button class="restart-button" id="restart-button">新游戏</button>
+                <button class="undo-button" id="undo-button" disabled>撤销</button>
+            </div>
+        </div>
+
+        <div class="game-container">
+            <div class="game-message" id="game-message">
+                <p></p>
+                <div class="lower">
+                    <button class="keep-playing-button" id="keep-playing-button">继续</button>
+                    <button class="retry-button" id="retry-button">再试一次</button>
+                </div>
+            </div>
+
+            <div class="grid-container">
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+            </div>
+
+            <div class="tile-container" id="tile-container"></div>
+        </div>
+
+        <p class="game-explanation">
+            <strong class="important">提示:</strong> 尽量保持大数字方块在一个角落，并有序排列其他方块，这样更容易合并！
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
